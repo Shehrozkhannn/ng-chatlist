@@ -26,7 +26,7 @@ import { VerifyEmailComponent } from './verify-email/verify-email.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFireModule.initializeApp(environment?.firebaseConfig),
     ReactiveFormsModule,
     FormsModule
   ],
