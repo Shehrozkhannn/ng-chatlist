@@ -1,0 +1,35 @@
+<div class="main-container">
+  <div class="chatbox">
+    <div class="chat-box-header">
+      <span>Chats</span>
+    </div>
+    <div class="search-bar">
+      <input type="text" placeholder="Find by name" #searchedValue (keyup)="search(searchedValue)">
+    </div>
+    <div class="chat-users">
+      <div *ngFor="let user of chatList , let i = index" class="users"
+      [ngStyle]="{'flex-direction' : user?.userId !== userId ? 'row-reverse' : 'row'}"
+      >
+        <div class="image-and-descrp" [ngStyle]="{'flex-direction' : user?.userId !== userId ? 'row-reverse' : 'row'}">
+          <img [src]="user.image" alt="">
+          {{user.message}}
+        </div>
+        <div class="delete-btn">
+          <span>{{user.date | date:'h:mm'}}</span>
+          <button (click)="deleteTheMsg(user.id)">
+            <img src="../../assets/cancel.png" alt="">
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="chats-text-area">
+      <textarea  on cols="50" rows="20" #val (keydown.enter)="addInTheList(val)" [(ngModel)]="chatInput"></textarea>
+      <div class="add-btn">
+        <button (click)="addInTheList(val)">
+          <!-- <img src="../../assets/icons8-add-new-24.png" alt=""> -->
+          <i class="fa fa-plus" style="font-size:25px"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

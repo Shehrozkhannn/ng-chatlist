@@ -1,0 +1,53 @@
+.main-container{
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .details-container{
+    height: 450px;
+    width: 345px;
+    border: 3px solid gray;
+    border-radius: 9px;
+    box-shadow: 9px 7px 8px #a7a7a7;
+    .user-img{
+      height: 248px;
+      width: 339px;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      img{
+        height: 202px;
+        width: 196px;
+        border-radius: 50%;
+      }
+      }
+      .delete-btn{
+        height: 18%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+}
+        button{
+          height: 33px;
+          width: 80px;
+          border: 1px solid #b56a6a26;
+          border-radius: 10px;
+}
+button:hover{
+  background-color: #000000ab;
+  color: #fff;
+  transition: 0.6s ease-in-out;
+  font-weight: 700;
+}
+        }
+    .user-name{
+      height: 13%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 38px;
+      font-weight: 700;
+    }
+  }

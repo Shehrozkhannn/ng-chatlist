@@ -1,0 +1,25 @@
+<div class="main-container">
+  <div class="login-container">
+    <div class="login-header">
+      <span>Register</span>
+    </div>
+    <div class="login-fields">
+      <form action="" [formGroup]="loginForm">
+      <div class="email-container">
+        <label for="">Email</label>
+        <input type="email" class="form-control" formControlName="email">
+      </div>
+      <div class="password-container">
+        <label for="">Password</label>
+        <input type="password" class="form-control" formControlName="password">
+      </div>
+      </form>
+    </div>
+    <div class="login-btn">
+      <button (click)="register()">Register</button>
+    </div>
+    <div class="Register">
+      <a href="/login">Login</a>
+    </div>
+  </div>
+</div>

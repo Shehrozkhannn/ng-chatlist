@@ -1,0 +1,33 @@
+<div class="main-container">
+  <div class="login-container">
+    <div class="login-header">
+      <span>Login</span>
+    </div>
+    <div class="login-fields">
+      <form action="" [formGroup]="loginForm">
+      <div class="email-container">
+        <label for="">Email</label>
+        <input type="email" class="form-control" formControlName="email">
+      </div>
+      <div class="password-container">
+        <label for="">Password</label>
+        <input type="password" class="form-control" formControlName="password">
+      </div>
+      </form>
+    </div>
+    <div class="login-btn">
+      <button (click)="login()">Login</button>
+    </div>
+    <div class="Register">
+      <a href="/register">Register</a>
+    </div>
+    <div class="forgot-password">
+      <a href="/forgot-password ">Forgot Password ?</a>
+    </div>
+    <div class="google-btn">
+       <button (click)="signInWithGoogle()">
+        <img src="../../assets/icons8-google-48.png" alt="">
+        Sign in with Google</button>
+    </div>
+  </div>
+</div>

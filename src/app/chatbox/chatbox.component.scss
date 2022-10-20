@@ -1,0 +1,155 @@
+.main-container{
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg,  #f9f9f9 0%,#ffffff 8%,#ffffff 8%,#ffffff 8%,#ffffff 8%,#ffffff 9%,#ffffff 9%,#ffffff 10%,#ffffff 48%,#ffffff 48%,#ffffff 50%,#fde3f3 50%,#fde3f3 50%,#fde3f3 50%,#ffffff 50%,#fac2e5 50%,#fac2e5 50%,#fac2e5 50%,#fac2e5 50%,#fac2e5 50%,#fac2e5 50%,#fac2e5 50%,#fac2e5 50%,#fac2e5 50%,#fac2e5 50%,#fac2e5 51%,#fde3f3 51%,#fde3f3 51%,#fde3f3 51%,#fde3f3 51%,#fde3f3 51%,#fde3f3 51%,#fde3f3 51%,#fde3f3 51%,#fde3f3 51%,#fde3f3 51%,#fde3f3 51%,#fde3f3 51%,#fde3f3 51%,#fde3f3 51%,#fac2e5 51%,#fac2e5 51%,#fac2e5 51%,#fac2e5 51%,#fac2e5 51%,#fac2e5 51%,#fac2e5 51%,#fac2e5 51%,#fac2e5 51%,#fac2e5 51%,#fac2e5 51%,#fac2e5 54%,#fac2e5 55%,#fde3f3 55%,#ffffff 55%,#ffffff 55%,#fac2e5 55%,#fac2e5 55%,#fac2e5 55%,#fac2e5 55%,#fac2e5 55%,#fac2e5 55%,#fac2e5 55%,#fac2e5 55%,#fac2e5 55%,#fac2e5 56%,#fac2e5 57%,#fde3f3 57%,#fdf9f9 57%,#fdf9f9 57%,#fac2e5 57%,#fac2e5 57%,#fac2e5 57%,#fac2e5 57%,#fac2e5 57%,#fac2e5 57%,#fac2e5 57%,#fde3f3 57%,#fac2e5 57%,#fac2e5 57%,#fac2e5 57%,#fac2e5 57%,#fac2e5 57%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9f9f9', endColorstr='#fac2e5',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+  .chatbox{
+    height: 600px;
+    width: 345px;
+    border: 3px solid #fff;
+    border-radius: 15px;
+    background-color: #fff;
+    position: relative;
+    
+    .chat-box-header{
+      height: 68px;
+      width: 341px;
+      background-color: #cf84ce;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 24px;
+      font-weight: 700;
+      color: #fff;
+      border: none;
+      border-top-left-radius: 15px;
+      border-top-right-radius: 15px;
+    }
+    .search-bar{
+      position: absolute;
+      top: 55px;
+      input{
+        height: 36px;
+        width: 342px;
+        border-radius: 29px;
+        border: 1px solid #fff8f8;
+        box-shadow: 1px 2px 0px #ededed;
+        outline: none;
+      }
+    }
+    .chat-users{
+      height: 84%;
+      display: flex;
+      flex-direction: column;
+      padding: 34px 15px 15px 15px;
+      overflow: auto;
+
+      .users{
+        font-size: 20px;
+        font-weight: 700;
+        height: 77px;
+        width: 100%;
+        border-bottom: 1px solid #81797926;
+        margin-bottom: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .image-and-descrp{
+            display: flex;
+            align-items: center;
+            width: 100%;
+            word-break: break-all;
+          img{
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+            margin: 0px 18px;
+          } 
+        }
+        .delete-btn{
+          span{
+            font-size: 18px;
+          }
+          button{
+            height: 26px;
+            width: 28px;
+            border-radius: 50%;
+            border: none;
+            cursor: pointer;
+            display: none;
+            img{
+              height: 26px;
+              width: 28px;
+              border-radius: 50%;
+              border: none;
+            }
+          }
+          // button:hover{
+          //   display: block;
+          // }
+        }
+       
+      }
+      .users:hover {
+        background-color: #08000808;
+        cursor: pointer;
+        // padding: 0px 8px;
+        .delete-btn button{
+          display: block;
+        }
+        .delete-btn span{
+          display: none;
+        }
+      }
+    }
+    .chats-text-area{
+      display: flex;
+      flex-direction: column;
+      justify-content: end;
+      margin-top: 1px;
+      position: relative;
+      margin-left: -3px;
+      textarea{
+        height: 36px;
+        width: 346px;
+        font-size: 20px;
+        font-weight: 700;
+        padding-top: 4px;
+        padding-left: 7px;
+        padding-right: 44px;
+        border: 1px solid #bdbdbd;
+        border-bottom-left-radius: 15px;
+        border-bottom-right-radius: 15px;
+        resize: none;
+        outline: none;
+      }
+      .add-btn{
+        position: absolute;
+        right: -4px;
+        top: 1px;
+        border-bottom-right-radius: 15px;
+        button{
+            height: 34px;
+            width: 49px;
+            // border-radius: 50%;
+            border: none;
+            cursor: pointer;
+            background-color: #cf84ce;
+            border-bottom-right-radius: 15px;
+          i{
+            filter: invert(1);
+          }
+        }
+      }
+    }
+  }
+}
+::placeholder{
+  color: rgb(187, 184, 184);
+  font-size: 14px;
+  font-weight: 700;
+  padding-left: 17px;
+}
