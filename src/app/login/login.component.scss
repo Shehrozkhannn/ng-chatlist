@@ -26,21 +26,28 @@
       height: 47%;
       padding: 12px 0px;
     }
-    .login-btn{
-      margin: 0px 0px;
-      button{
-        height: 35px;
-        width: 74px;
-        border-radius: 9px;
-        border: none;
-        cursor: pointer;
-        background-color: #587bd5d9;
-        color: #fff;
+    .action-buttons {
+      display: flex;
+      margin-bottom: 10px;
+      .login-btn, .register-btn{
+        margin: 0px 0px;
+        button{
+          height: 35px;
+          width: 74px;
+          border-radius: 9px;
+          border: none;
+          cursor: pointer;
+          background-color: #587bd5d9;
+          color: #fff;
+        }
+        button:hover{
+          color: #fff;
+          background-color: #cf84ce;
+          transition: ease 0.5s;
+        }
       }
-      button:hover{
-        color: #fff;
-        background-color: #cf84ce;
-        transition: ease 0.5s;
+      .register-btn {
+        margin-left: 10px;
       }
     }
     .need-account{
@@ -78,4 +85,21 @@
       }
     }
   }
+}
+
+@media only screen and (max-width: 600px) {
+  .main-container {
+    .login-container{
+      width: unset !important;
+      .action-buttons {
+        width: 100%;
+        .login-btn, .register-btn{
+          width: 45%;
+          button {
+            width: 100%;
+          }
+      }
+    }
+  }
+}
 }
