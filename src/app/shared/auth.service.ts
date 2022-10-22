@@ -3,6 +3,7 @@ import { AngularFireAuth} from '@angular/fire/compat/auth'
 import { Router } from '@angular/router';
 import {GoogleAuthProvider , GithubAuthProvider ,FacebookAuthProvider } from '@angular/fire/auth';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
+import { ToastrService } from 'ngx-toastr';
 
 @Injectable({
   providedIn: 'root'
@@ -10,26 +11,26 @@ import { AngularFirestore } from '@angular/fire/compat/firestore';
 export class AuthService {
   // email : string = '';
 
-  constructor(private fireauth : AngularFireAuth , private router : Router , private fireService : AngularFirestore ) { }
+  constructor(private fireauth : AngularFireAuth , private router : Router , private fireService : AngularFirestore, private toastr: ToastrService ) { }
 
   login(loginForm:any){
     // console.log(loginForm.email);
     this.fireauth.signInWithEmailAndPassword(loginForm.email , loginForm.password).then( (res:any) =>{
+      this.toastr.success('Login Successfully');
       localStorage.setItem('token', 'true');
       localStorage.setItem('id' , res.user?.multiFactor.user.uid);
-      console.log(res);
       this.router.navigate(['/chatbox']);
     }, err => {   
-      alert("Something went wrong");
+      this.toastr.error(err?.message ? err?.message : err);
       this.router.navigate(['/login'])
     })
     }
   register(loginForm:any){
     this.fireauth.createUserWithEmailAndPassword(loginForm.email , loginForm.password).then( res =>{
-      alert("Registration Sucessful");
+      this.toastr.success('Registred Successfully');
       this.router.navigate(['/login']);
     }, err => {
-      alert(err.message);
+      this.toastr.error(err?.message ? err?.message : err);
       this.router.navigate(['/register']);
     })
   }
