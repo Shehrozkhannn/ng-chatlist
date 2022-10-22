@@ -39,7 +39,7 @@ export class AuthService {
       localStorage.removeItem('token');
       this.router.navigate(['/login']);
     }, err => {
-      alert(err.message)
+      this.toastr.error(err?.message ? err?.message : err)
     })
   }
 

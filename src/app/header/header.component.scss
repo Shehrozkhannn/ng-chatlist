@@ -1,0 +1,14 @@
+.header-container {
+    position: absolute;
+    right: 28px;
+    top: 6px;
+    .logout-btn {
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+        img {
+            width: inherit;
+            height: inherit;
+        }
+    }
+}
