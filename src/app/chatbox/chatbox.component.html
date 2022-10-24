@@ -8,28 +8,30 @@
       <input type="text" placeholder="Find by name" #searchedValue (keyup)="search(searchedValue)">
     </div>
     <div class="chat-users">
-      <div *ngFor="let user of chatList , let i = index" class="users"
+      <div *ngFor="let user of chatList , let i = index" [ngClass]= "user?.userId === userId ? 'user-msgs users' : 'users'"
       [ngStyle]="{'flex-direction' : user?.userId !== userId ? 'row-reverse' : 'row'}"
       >
         <div class="image-and-descrp" [ngStyle]="{'flex-direction' : user?.userId !== userId ? 'row-reverse' : 'row'}">
           <img [src]="user.image" alt="">
-          {{user.message}}
+          <span>{{user.message}}</span>
         </div>
         <div class="delete-btn">
           <span>{{user.date | date:'h:mm'}}</span>
-          <button (click)="deleteTheMsg(user.id)">
+          <button (click)="deleteTheMsg(user.id)" >
             <img src="assets/cancel.png" alt="">
           </button>
         </div>
       </div>
     </div>
     <div class="chats-text-area">
-      <textarea  on cols="50" rows="20" #val (keydown.enter)="addInTheList(val)" [(ngModel)]="chatInput"></textarea>
+      <textarea  id="#example1" on cols="50" rows="20" #val (keydown.enter)="addInTheList(val)" [(ngModel)]="chatInput"></textarea>
       <div class="add-btn">
         <button (click)="addInTheList(val)">
           <i class="fa fa-plus" style="font-size:25px"></i>
         </button>
       </div>
+      <button class="emoji-btn" (click)="isEmojiPickerVisible = !isEmojiPickerVisible;">😀</button>
+<emoji-mart  [set]="'apple'" class="emoji-mart" *ngIf="isEmojiPickerVisible" (emojiSelect)="addEmoji($event)" title="Choose your emoji"></emoji-mart>
     </div>
   </div>
 </div>

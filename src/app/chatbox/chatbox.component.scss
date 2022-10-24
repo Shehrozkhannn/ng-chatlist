@@ -50,26 +50,29 @@
       .users{
         font-size: 20px;
         font-weight: 700;
-        height: 77px;
         width: 100%;
         border-bottom: 1px solid #81797926;
         margin-bottom: 12px;
         display: flex;
-        align-items: center;
         justify-content: space-between;
+        padding-bottom: 14px;
         .image-and-descrp{
             display: flex;
-            align-items: center;
             width: 100%;
             word-break: break-all;
           img{
             height: 50px;
             width: 50px;
             border-radius: 50%;
-            margin: 0px 18px;
+            // margin: 0px 18px;
           } 
+          span{
+            padding: 9px 17px 0px 17px;
+            word-break: break-word;
+          }
         }
         .delete-btn{
+          padding-top: 9px;
           span{
             font-size: 18px;
           }
@@ -88,12 +91,10 @@
             }
           }
         }
-       
       }
-      .users:hover {
+      .user-msgs:hover{
         background-color: #08000808;
         cursor: pointer;
-        // padding: 0px 8px;
         .delete-btn button{
           display: block;
         }
@@ -125,13 +126,12 @@
       }
       .add-btn{
         position: absolute;
-        right: -4px;
+        right: -3px;
         top: 1px;
         border-bottom-right-radius: 15px;
         button{
             height: 34px;
             width: 49px;
-            // border-radius: 50%;
             border: none;
             cursor: pointer;
             background-color: #cf84ce;
@@ -139,6 +139,17 @@
           i{
             filter: invert(1);
           }
+        }
+      }
+      .emoji-btn{
+        right: 58px;
+        top: 7px;
+        background: transparent;
+        position: absolute;
+        border: 0;
+        cursor: pointer;
+        &:focus {
+           outline: 0;
         }
       }
     }
@@ -151,6 +162,10 @@
   padding-left: 17px;
 }
 
+::ng-deep emoji-mart{
+  position: absolute;
+  bottom: 36px;
+}
 @media only screen and (max-width: 600px) {
   .main-container{
     .chatbox{

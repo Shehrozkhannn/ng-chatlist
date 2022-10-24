@@ -16,6 +16,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HeaderComponent } from './header/header.component';
 import {MatIconModule} from '@angular/material/icon';
 import {MatMenuModule} from '@angular/material/menu';
+import { PickerModule } from '@ctrl/ngx-emoji-mart';
 
 
 @NgModule({
@@ -38,9 +39,10 @@ import {MatMenuModule} from '@angular/material/menu';
     BrowserAnimationsModule,
     ToastrModule.forRoot(),
     MatIconModule,
-    MatMenuModule
+    MatMenuModule,
+    PickerModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+bootstrap: [AppComponent],
 })
 export class AppModule { }

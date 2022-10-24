@@ -63,7 +63,7 @@ export class AuthService {
   }  
   
   addMessage(message:any){
-    return this.fireService.collection('User-chat-messages').add(message)
+    return this.fireService.collection('User-chat-messages').add(message);
   }
 
   deleteMessage(messageId :any){
