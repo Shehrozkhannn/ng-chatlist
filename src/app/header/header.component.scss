@@ -2,13 +2,36 @@
     position: absolute;
     right: 28px;
     top: 6px;
-    .logout-btn {
-        width: 30px;
-        height: 30px;
-        cursor: pointer;
-        img {
-            width: inherit;
-            height: inherit;
+    .btns-section {
+        display: flex;
+        align-items: flex-end;
+        .change-theme-toggle {
+            margin-right: 20px;
+            display: flex;
+            align-items: center;
+            mat-slide-toggle {
+                margin: 0px 10px;
+            }
+            span {
+                font-weight: bold;
+                img {
+                    width: 30px;
+                    height: 30px;
+                }
+            }
+        }
+        .logout-btn {
+            width: 30px;
+            height: 30px;
+            cursor: pointer;
+            img {
+                width: inherit;
+                height: inherit;
+            }
         }
     }
+}
+
+.dark-mode-icon {
+    filter: invert(1);
 }

@@ -17,6 +17,8 @@ import { HeaderComponent } from './header/header.component';
 import {MatIconModule} from '@angular/material/icon';
 import {MatMenuModule} from '@angular/material/menu';
 import { PickerModule } from '@ctrl/ngx-emoji-mart';
+import {MatSlideToggleModule} from '@angular/material/slide-toggle';
+import { DARK_MODE_OPTIONS } from 'angular-dark-mode';
 
 
 @NgModule({
@@ -28,7 +30,7 @@ import { PickerModule } from '@ctrl/ngx-emoji-mart';
     RegisterComponent,
     ForgotPasswordComponent,
     VerifyEmailComponent,
-    HeaderComponent
+    HeaderComponent,
   ],
   imports: [
     BrowserModule,
@@ -40,9 +42,18 @@ import { PickerModule } from '@ctrl/ngx-emoji-mart';
     ToastrModule.forRoot(),
     MatIconModule,
     MatMenuModule,
-    PickerModule
+    PickerModule,
+    MatSlideToggleModule
   ],
-  providers: [],
+  providers: [
+    {
+      provide: DARK_MODE_OPTIONS,
+      useValue: {
+          darkModeClass: 'my-dark-mode',
+          lightModeClass: 'my-light-mode'
+      }
+  }
+  ],
 bootstrap: [AppComponent],
 })
 export class AppModule { }
