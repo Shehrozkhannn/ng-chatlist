@@ -1,5 +1,16 @@
 <div class="header-container">
-    <div class="logout-btn" (click)="logOut()">
-        <img src="assets/logout.png">
+    <div class="btns-section">
+        <div class="change-theme-toggle">
+            <span>
+                <img src="assets/light-mode.png">
+            </span>
+            <mat-slide-toggle [checked]="darkMode$ | async" (change)="onValChange()"></mat-slide-toggle>
+            <span>
+                <img [ngClass]="{'dark-mode-icon': (darkMode$ | async) === true}" src="assets/dark-mode.png">
+            </span>
+        </div>
+        <div *ngIf="isLoggedIn" class="logout-btn" (click)="logOut()">
+            <img src="assets/logout.png">
+        </div>
     </div>
 </div>

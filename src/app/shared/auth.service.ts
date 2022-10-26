@@ -4,12 +4,15 @@ import { Router } from '@angular/router';
 import {GoogleAuthProvider , GithubAuthProvider ,FacebookAuthProvider } from '@angular/fire/auth';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
 import { ToastrService } from 'ngx-toastr';
+import { BehaviorSubject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
   // email : string = '';
+  userSource = new BehaviorSubject(false);
+  isLoggedIn = this.userSource.asObservable();
 
   constructor(private fireauth : AngularFireAuth , private router : Router , private fireService : AngularFirestore, private toastr: ToastrService ) { }
 
@@ -19,6 +22,7 @@ export class AuthService {
       this.toastr.success('Login Successfully');
       localStorage.setItem('token', 'true');
       localStorage.setItem('id' , res.user?.multiFactor.user.uid);
+      this.userSource.next(true);
       this.router.navigate(['/chatbox']);
     }, err => {   
       this.toastr.error(err?.message ? err?.message : err);
@@ -37,6 +41,7 @@ export class AuthService {
   logout(){
     this.fireauth.signOut().then(()=>{
       localStorage.removeItem('token');
+      this.userSource.next(false);
       this.router.navigate(['/login']);
     }, err => {
       this.toastr.error(err?.message ? err?.message : err)
