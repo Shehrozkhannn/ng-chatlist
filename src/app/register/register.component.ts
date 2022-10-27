@@ -12,14 +12,20 @@ export class RegisterComponent implements OnInit {
     email : new FormControl('' , [Validators.required , Validators.email]),
     password : new FormControl('' , Validators.required)
 })
+  show = false;
 
   constructor(private auth : AuthService) { }
 
   ngOnInit(): void {
   }
+
   register(){
     this.auth.register(this.loginForm.value);
     this.loginForm.reset();
+  }
+
+  password() {
+    this.show = !this.show;
   }
 
 }

@@ -11,7 +11,9 @@
       </div>
       <div class="password-container">
         <label for="">Password</label>
-        <input type="password" class="form-control" formControlName="password">
+        <input [type]="show ? 'text' : 'password'" class="form-control password-field" formControlName="password">
+        <img class="password-icon" [ngClass]="{'dark-mode-icon': show === true}" (click)="password()" src="assets/show.png" *ngIf="show">
+        <img class="password-icon" [ngClass]="{'dark-mode-icon': show === false}" (click)="password()" src="assets/hide.png" *ngIf="!show">
       </div>
       </form>
     </div>

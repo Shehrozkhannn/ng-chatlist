@@ -11,7 +11,8 @@ export class LoginComponent implements OnInit {
   loginForm = new FormGroup({
     email : new FormControl('' , [Validators.required , Validators.email]),
     password : new FormControl('' , Validators.required)
-})
+  })
+  show = false;
 
   constructor(private auth : AuthService) { }
 
@@ -24,5 +25,9 @@ export class LoginComponent implements OnInit {
   }
   signInWithGoogle(){
     this.auth.signInWithGoogle();
+  }
+
+  password() {
+    this.show = !this.show;
   }
 }
