@@ -24,7 +24,22 @@
       height: 47%;
       padding: 12px 0px;
     }
-    .register-btn{
+    .password-container {
+      img {
+        cursor: pointer;
+        float: right;
+        left: -15px;
+        margin-top: -25px;
+        position: relative;
+        z-index: 2;
+        width: 20px;
+        height: 20px;
+      }
+    }
+    .action-buttons {
+      display: flex;
+      margin-bottom: 10px;
+    .register-btn, .back-to-login-btn{
       margin: 22px 0px;
       button{
         height: 35px;
@@ -41,6 +56,13 @@
         transition: ease 0.5s;
       }
     }
+    .back-to-login-btn {
+      margin-left: 10px;
+      button{
+        width: 110px !important;
+      }
+    }
+  }
     .need-account{
       display: inline-block;
       width: 60%;

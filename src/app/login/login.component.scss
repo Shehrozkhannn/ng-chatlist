@@ -24,6 +24,18 @@
       height: 47%;
       padding: 12px 0px;
     }
+    .password-container {
+      img {
+        cursor: pointer;
+        float: right;
+        left: -15px;
+        margin-top: -25px;
+        position: relative;
+        z-index: 2;
+        width: 20px;
+        height: 20px;
+      }
+    }
     .action-buttons {
       display: flex;
       margin-bottom: 10px;

@@ -77,6 +77,16 @@ body.my-dark-mode {
   .login-container .login-header span {
     color: #fff !important;
   }
+  .action-buttons button:hover {
+    background-color: #000 !important;
+    box-shadow: 3px 12px 20px #0c09ec !important;
+  }
+  .action-buttons button {
+    background: linear-gradient(135deg,  #000 0%,#000 8%,#000 8%,#000 8%,#000 8%,#000 9%,#000 9%,#000 10%,#000 48%,#000 48%,#000 50%,#0c09ec 50%,#0c09ec 50%,#0c09ec 50%,#000 50%,#0c09ec 50%,#0c09ec 50%,#0c09ec 50%,#0c09ec 50%,#0c09ec 50%,#0c09ec 50%,#0c09ec 50%,#0c09ec 50%,#0c09ec 50%,#0c09ec 50%,#0c09ec 51%,#0c09ec 51%,#0c09ec 51%,#0c09ec 51%,#0c09ec 51%,#0c09ec 51%,#0c09ec 51%,#0c09ec 51%,#0c09ec 51%,#0c09ec 51%,#0c09ec 51%,#0c09ec 51%,#0c09ec 51%,#0c09ec 51%,#0c09ec 51%,#0c09ec 51%,#0c09ec 51%,#0c09ec 51%,#0c09ec 51%,#0c09ec 51%,#0c09ec 51%,#0c09ec 51%,#0c09ec 51%,#0c09ec 51%,#0c09ec 51%,#0c09ec 51%,#0c09ec 54%,#0c09ec 55%,#0c09ec 55%,#000 55%,#000 55%,#0c09ec 55%,#0c09ec 55%,#0c09ec 55%,#0c09ec 55%,#0c09ec 55%,#0c09ec 55%,#0c09ec 55%,#0c09ec 55%,#0c09ec 55%,#0c09ec 56%,#0c09ec 57%,#0c09ec 57%,#000 57%,#000 57%,#0c09ec 57%,#0c09ec 57%,#0c09ec 57%,#0c09ec 57%,#0c09ec 57%,#0c09ec 57%,#0c09ec 57%,#0c09ec 57%,#0c09ec 57%,#0c09ec 57%,#0c09ec 57%,#0c09ec 57%,#0c09ec 57%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  }
+  .dark-mode-icon {
+    filter: invert(1);
+  }
 }
 
 body.my-light-mode {
