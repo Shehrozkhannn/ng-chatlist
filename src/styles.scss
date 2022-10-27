@@ -16,18 +16,25 @@ body:not(.dark-mode-preloading) {
 }
 
 body.my-dark-mode {
-  background-color: #000;
+  // background-color: #000;
+  background: linear-gradient(135deg,  #000 0%,#000 8%,#000 8%,#000 8%,#000 8%,#000 9%,#000 9%,#000 10%,#000 48%,#000 48%,#000 50%,#0c09ec 50%,#0c09ec 50%,#0c09ec 50%,#000 50%,#0c09ec 50%,#0c09ec 50%,#0c09ec 50%,#0c09ec 50%,#0c09ec 50%,#0c09ec 50%,#0c09ec 50%,#0c09ec 50%,#0c09ec 50%,#0c09ec 50%,#0c09ec 51%,#0c09ec 51%,#0c09ec 51%,#0c09ec 51%,#0c09ec 51%,#0c09ec 51%,#0c09ec 51%,#0c09ec 51%,#0c09ec 51%,#0c09ec 51%,#0c09ec 51%,#0c09ec 51%,#0c09ec 51%,#0c09ec 51%,#0c09ec 51%,#0c09ec 51%,#0c09ec 51%,#0c09ec 51%,#0c09ec 51%,#0c09ec 51%,#0c09ec 51%,#0c09ec 51%,#0c09ec 51%,#0c09ec 51%,#0c09ec 51%,#0c09ec 51%,#0c09ec 54%,#0c09ec 55%,#0c09ec 55%,#000 55%,#000 55%,#0c09ec 55%,#0c09ec 55%,#0c09ec 55%,#0c09ec 55%,#0c09ec 55%,#0c09ec 55%,#0c09ec 55%,#0c09ec 55%,#0c09ec 55%,#0c09ec 56%,#0c09ec 57%,#0c09ec 57%,#000 57%,#000 57%,#0c09ec 57%,#0c09ec 57%,#0c09ec 57%,#0c09ec 57%,#0c09ec 57%,#0c09ec 57%,#0c09ec 57%,#0c09ec 57%,#0c09ec 57%,#0c09ec 57%,#0c09ec 57%,#0c09ec 57%,#0c09ec 57%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   color: #fff;
+  .chatbox {
+    background-color: #0c09ec !important;
+    border: none !important;
+  }
   .chat-box-header{
-    background-color: #000 !important;
+    background-color: #0c09ec !important;
   }
   .add-btn button {
-    background-color: #000 !important;
-    border-left: 1px solid white !important;
+    background-color: #0c09ec !important;
+    border: 1px solid #000 !important;
   }
   .search-bar input {
     background-color: #000 !important;
     color: #fff !important;
+    border: none !important;
+    box-shadow: 0px 0px 20px #0c09ec !important;
   }
   .search-bar input::placeholder, emoji-mart .emoji-mart .emoji-mart-search button svg {
     color: #fff !important;
@@ -41,6 +48,7 @@ body.my-dark-mode {
   .chats-text-area textarea {
     background-color: #000 !important;
     color: #fff !important;
+    border: none !important;
   }
   emoji-mart .emoji-mart, emoji-mart .emoji-mart input, emoji-mart .emoji-mart input::placeholder,  emoji-mart .emoji-mart .emoji-mart-category-label span {
     background-color: #000 !important;
@@ -54,7 +62,9 @@ body.my-dark-mode {
     background-color: #000 !important;
   }
   ::-webkit-scrollbar-thumb {
-    border: 1px solid white;
+    background: linear-gradient(135deg,  #000 0%,#000 8%,#000 8%,#000 8%,#000 8%,#000 9%,#000 9%,#000 10%,#000 48%,#000 48%,#000 50%,#0c09ec 50%,#0c09ec 50%,#0c09ec 50%,#000 50%,#0c09ec 50%,#0c09ec 50%,#0c09ec 50%,#0c09ec 50%,#0c09ec 50%,#0c09ec 50%,#0c09ec 50%,#0c09ec 50%,#0c09ec 50%,#0c09ec 50%,#0c09ec 51%,#0c09ec 51%,#0c09ec 51%,#0c09ec 51%,#0c09ec 51%,#0c09ec 51%,#0c09ec 51%,#0c09ec 51%,#0c09ec 51%,#0c09ec 51%,#0c09ec 51%,#0c09ec 51%,#0c09ec 51%,#0c09ec 51%,#0c09ec 51%,#0c09ec 51%,#0c09ec 51%,#0c09ec 51%,#0c09ec 51%,#0c09ec 51%,#0c09ec 51%,#0c09ec 51%,#0c09ec 51%,#0c09ec 51%,#0c09ec 51%,#0c09ec 51%,#0c09ec 54%,#0c09ec 55%,#0c09ec 55%,#000 55%,#000 55%,#0c09ec 55%,#0c09ec 55%,#0c09ec 55%,#0c09ec 55%,#0c09ec 55%,#0c09ec 55%,#0c09ec 55%,#0c09ec 55%,#0c09ec 55%,#0c09ec 56%,#0c09ec 57%,#0c09ec 57%,#000 57%,#000 57%,#0c09ec 57%,#0c09ec 57%,#0c09ec 57%,#0c09ec 57%,#0c09ec 57%,#0c09ec 57%,#0c09ec 57%,#0c09ec 57%,#0c09ec 57%,#0c09ec 57%,#0c09ec 57%,#0c09ec 57%,#0c09ec 57%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    border: 1px solid #fff;
+    // box-shadow: 0px 0px 20px #0c09ec !important;
     border-radius: 10px;
   }
   .change-theme-toggle mat-slide-toggle span {
@@ -71,5 +81,5 @@ body.my-dark-mode {
 
 body.my-light-mode {
   background: linear-gradient(135deg,  #f9f9f9 0%,#ffffff 8%,#ffffff 8%,#ffffff 8%,#ffffff 8%,#ffffff 9%,#ffffff 9%,#ffffff 10%,#ffffff 48%,#ffffff 48%,#ffffff 50%,#fde3f3 50%,#fde3f3 50%,#fde3f3 50%,#ffffff 50%,#fac2e5 50%,#fac2e5 50%,#fac2e5 50%,#fac2e5 50%,#fac2e5 50%,#fac2e5 50%,#fac2e5 50%,#fac2e5 50%,#fac2e5 50%,#fac2e5 50%,#fac2e5 51%,#fde3f3 51%,#fde3f3 51%,#fde3f3 51%,#fde3f3 51%,#fde3f3 51%,#fde3f3 51%,#fde3f3 51%,#fde3f3 51%,#fde3f3 51%,#fde3f3 51%,#fde3f3 51%,#fde3f3 51%,#fde3f3 51%,#fde3f3 51%,#fac2e5 51%,#fac2e5 51%,#fac2e5 51%,#fac2e5 51%,#fac2e5 51%,#fac2e5 51%,#fac2e5 51%,#fac2e5 51%,#fac2e5 51%,#fac2e5 51%,#fac2e5 51%,#fac2e5 54%,#fac2e5 55%,#fde3f3 55%,#ffffff 55%,#ffffff 55%,#fac2e5 55%,#fac2e5 55%,#fac2e5 55%,#fac2e5 55%,#fac2e5 55%,#fac2e5 55%,#fac2e5 55%,#fac2e5 55%,#fac2e5 55%,#fac2e5 56%,#fac2e5 57%,#fde3f3 57%,#fdf9f9 57%,#fdf9f9 57%,#fac2e5 57%,#fac2e5 57%,#fac2e5 57%,#fac2e5 57%,#fac2e5 57%,#fac2e5 57%,#fac2e5 57%,#fde3f3 57%,#fac2e5 57%,#fac2e5 57%,#fac2e5 57%,#fac2e5 57%,#fac2e5 57%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9f9f9', endColorstr='#fac2e5',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9f9f9', endColorstr='#0c09ec',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 }

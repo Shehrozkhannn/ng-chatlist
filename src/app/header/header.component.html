@@ -4,7 +4,7 @@
             <span>
                 <img src="assets/light-mode.png">
             </span>
-            <mat-slide-toggle [checked]="darkMode$ | async" (change)="onValChange()"></mat-slide-toggle>
+            <mat-slide-toggle  [checked]="darkMode$ | async" (change)="onValChange()"></mat-slide-toggle>
             <span>
                 <img [ngClass]="{'dark-mode-icon': (darkMode$ | async) === true}" src="assets/dark-mode.png">
             </span>
